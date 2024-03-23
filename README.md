@@ -4,6 +4,7 @@ go slice tools
 # sliceutil
 
 golang sliceutil, including methods like TakeWhile, Filter, ForEach and so on, which were inpired by js slice
+similar: [github.com/conbanwa/js](https://github.com/conbanwa/js)
 
 # examples
 
