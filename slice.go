@@ -47,6 +47,14 @@ func Slice[T comparable](arr []T, limit ...int) []T {
 	return arr[start:end]
 }
 
+func Cut[T comparable](arr []T, max ...int) []T {
+	limit := 99
+	if len(max) != 0 {
+		limit = max[0]
+	}
+	return Slice(arr, 0, limit)
+}
+
 func MapKeys[T comparable, V any](m map[T]V) []T {
 	sl := make([]T, 0, len(m))
 	for k := range m {
