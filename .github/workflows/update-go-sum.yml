@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT }}  # PAT for push to default branch; use ${{ github.token }} for PRs
+          token: ${{ github.token }}  # PAT for push to default branch; use ${{ github.token }} for PRs
           ref: ${{ github.head_ref }}  # For PR branches
 
       - uses: actions/setup-go@v5
