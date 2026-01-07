@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: [ main ]
     types: [ opened, synchronize ]
+  workflow_run:
+    workflows: ['Update go.sum']
+    types: [completed]
+    branches: [main]
 jobs:
   ci-job:
     runs-on: ubuntu-latest
